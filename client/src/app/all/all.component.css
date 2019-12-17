@@ -1,0 +1,45 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+table { 
+	width: 600px; 
+    border-collapse: collapse;
+}
+
+tr:nth-of-type(odd) { 
+	background: #eee; 
+}
+
+th { 
+	background: #013d64; 
+	color: white; 
+    font-weight: bold;     
+}
+
+td, th { 
+    text-align: center;
+	padding: 10px; 
+	border: 1px solid transparent; 
+	font-size: 18px;
+}
+h3{
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+}
+ul li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(18, 18, 124, 0.767)
+}
+
+a:hover{
+    color: rgb(66, 147, 185);
+}
+
+ul{
+    margin: 0 0;
+    padding: 0 0;
+}

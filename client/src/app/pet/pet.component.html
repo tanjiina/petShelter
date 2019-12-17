@@ -1,0 +1,19 @@
+<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+<fieldset>
+    <legend><h3>Details for {{ pet.name }}</h3></legend>
+    <p><strong>Name:</strong> {{ pet.name }}</p>
+    <p><strong>Type:</strong> {{ pet.type }}</p>
+    <p><strong>Description:</strong> {{ pet.description }}</p>
+    <div><strong>Skills:</strong> 
+        <ul>
+            <li *ngIf = "pet.skill1">{{ pet.skill1 }}</li>
+            <li *ngIf = "pet.skill2">{{ pet.skill2 }}</li>
+            <li *ngIf = "pet.skill3">{{ pet.skill3 }}</li>
+        </ul>
+  </div>
+    <p><strong>Likes:</strong> {{ pet.likes }}</p>
+</fieldset>
+
+<button *ngIf="liked" (click)="likePet(pet._id)" disabled class="btn">Like</button>
+<button *ngIf="!liked" (click)="likePet(pet._id)" class="btn" >Like</button>
+<button  (click)="adoptPet(pet._id)" class="btn">Adopt</button>

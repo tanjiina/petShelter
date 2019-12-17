@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+<h3>These Pets are looking for a home</h3>
+<!-- <ul>
+    <li> 
+        <a [routerLink] = "['/']" class="link">Home</a>
+    </li>
+    <li> 
+        <a [routerLink] = "['/new']" class="link">Add a Pet</a>
+    </li>
+</ul> -->
+<table border = 1>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let pet of pets">
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.type }}</td>
+            <td><a [routerLink] = "['/pet', pet._id]">Details</a> | <a [routerLink] = "['/edit', pet._id]">Edit</a></td>
+        </tr>
+    </tbody>
+</table>

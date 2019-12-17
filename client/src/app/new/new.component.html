@@ -1,0 +1,26 @@
+<form (submit) = "addPet()">
+    {{ newPet | json }}
+    <h3 class="heading2" >Know of pet needing a home?</h3>
+    <div>
+        <label>Name:</label>
+        <input type="text" name="name" [(ngModel)]="pet.name">
+        <span *ngIf = "errors.name">{{errors.name.message}}</span>
+    </div>
+    <div>
+        <label>Type:</label>
+        <input type="text" name="type" [(ngModel)]="pet.type">
+        <span *ngIf = "errors.type">{{errors.type.message}}</span>
+    </div>
+    <div>
+        <label>Descrption:</label>
+        <textarea name="description" cols="30" rows="2" [(ngModel)]="pet.description"></textarea>
+        <span *ngIf = "errors.description">{{errors.description.message}}</span>
+    </div>
+    <div>
+        <label>Skills(Optional):</label>
+        <p>Skill 1: <input type="text" name="skill1" [(ngModel)]="pet.skill1"></p>
+        <p>Skill 2: <input type="text" name="skill2" [(ngModel)]="pet.skill2"></p>
+        <p>Skill 3: <input type="text" name="skill3" [(ngModel)]="pet.skill3"></p>
+    </div>
+    <input type="submit" class="btn" value="Create!">
+</form>
